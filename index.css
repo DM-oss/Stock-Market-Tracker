@@ -12,7 +12,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-background);
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: repeating-linear-gradient(315deg, #0000002E 92%, #073AFF00 100%), repeating-radial-gradient(75% 75% at 238% 218%, #073AFF14 29%, #FFFFFF12 30%), radial-gradient(99% 99% at 109% 2%, #000000FF 0%, #073AFF00 100%), radial-gradient(99% 99% at 21% 78%, #030000FF 0%, #073AFF00 100%), radial-gradient(160% 154% at 711px -303px, #000000FF 0%, #000000FF 19%, #000000FF 57%, #000000FF 75%, #000824FF 83%);
 }
 
 /* default settings for most things that repeat
@@ -74,7 +76,6 @@ body {
     border-radius: 0.5rem;
     background-color: var(--main-white);
     border: 1px solid #cbcbcb;
-    box-shadow: 0 0 20px 6px #cbcdd3;
     width: 72vw;
     height: 77vh;
     display: flex;
@@ -226,12 +227,9 @@ li {
 .tableBody {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
-    max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: var(--main-white);
-    border-bottom: 2px solid #cbcdd3;
     border-radius: 0 0 0.4rem 0.4rem;
 }
 
@@ -239,6 +237,7 @@ li {
     width: 100%;
     border-bottom: 2px solid #dadadf;
     cursor: pointer;
+    overflow-y: hidden;
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -256,7 +255,7 @@ li {
 }
 
 element::-webkit-scrollbar {
-display: none;
+    display: none;
 }
 
 .symbolCol {
@@ -283,7 +282,7 @@ display: none;
     flex: 0 0 12%;
 }
 
-.volumeCol {
+.technologyCol {
     flex: 0 0 15%;
 }
 
